@@ -1,0 +1,15 @@
+[package]
+name = "putf"
+version = "0.1.0"
+edition = "2021"
+description = "Put files through tcp streams"
+authors = ["Predmet Chen <chengongpp@outlook.com>"]
+license = "MIT"
+
+[dependencies]
+clap = {version = "3", features = ["derive"]}
+
+[profile.release]
+opt-level = 'z'
+lto = true
+codegen-units = 1
